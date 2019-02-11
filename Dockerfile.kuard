@@ -12,9 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ARG_FROM
+FROM alpine
 
-ADD bin/ARG_FAKEVER/ARG_ARCH/kuard /kuard
+COPY bin/blue/amd64/kuard /kuard
 
-USER nobody:nobody
 ENTRYPOINT ["/kuard"]
